@@ -5,15 +5,15 @@ export const galleryItems = [
     type: "frame",
     price: "Starting from ₹199",
     delivery: true,
-    image: "/images/frame.jpg",
+    image: `${import.meta.env.BASE_URL}images/frame.jpg`,
   },
   {
     code: "FX-002",
     name: "Flex Printing",
     type: "flex",
-    price: "Starting from ₹30 / sq.ft",
+    price: "Starting from ₹40 / sq.ft",
     delivery: true,
-    image: "/images/flex.jpg",
+    image: `${import.meta.env.BASE_URL}images/flex.jpg`,
   },
   {
     code: "PL-003",
@@ -21,14 +21,14 @@ export const galleryItems = [
     type: "pillow",
     price: "Starting from ₹399",
     delivery: true,
-    image: "/images/pillow.jpg",
+    image: `${import.meta.env.BASE_URL}images/pillow.jpg`,
   },
   {
     code: "MG-004",
     name: "Coffee Mug Printing",
     type: "mug",
     price: "Starting from ₹299",
-    delivery: false, // usually pickup
-    image: "/images/mug.jpg",
+    delivery: true, // usually pickup
+    image: `${import.meta.env.BASE_URL}images/mug.jpg`,
   },
 ]

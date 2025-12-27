@@ -45,18 +45,22 @@ export const services = [
     title: "CCTV Sale/Services",
     items: [
       "4/8/16 Channel",
-      "IP Camera",
-      "DVR Recorder",
-      "Service",
+      "Camera Installation",
+      "Camera Repair",
+      "DVR/NVR Systems",
+      "CCTV Accessories",
     ],
   },
   {
     title: "Computer Sale/Services",
     items: [
       "Laptop Service",
-      "System Upgrade",
-      "DVR Recorder",
-      "Service",
+      "Desktop Service",
+      "Hardware Upgrade",
+      "Computer Repair",
+      "Accessories Sale",
+      "Software Installation",
+      "Networking Solutions",
     ],
   },
 ]
