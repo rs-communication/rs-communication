@@ -5,30 +5,39 @@ export default function Contact() {
 
   return (
     <section className="bg-slate-50 py-20">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             {lang === "en" ? "Contact Us" : "தொடர்பு கொள்ள"}
           </h2>
+          <p className="text-slate-600 mt-3">
+            {lang === "en"
+              ? "We are happy to help you with any service enquiry"
+              : "எங்கள் சேவைகள் தொடர்பான எந்தவொரு உதவிக்கும் எங்களை தொடர்பு கொள்ளுங்கள்"}
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-12">
 
-          {/* Left */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm">
+          {/* Left: Contact Card */}
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
 
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-xl font-semibold text-slate-900 mb-4">
               RS Communication
             </h3>
 
-            <p className="mb-2">📞 7548836764 / 9894395041</p>
-
-            <p className="mb-4">📍 Digital & Government Service Center</p>
+            <div className="space-y-3 text-slate-700 text-sm">
+              <p>📞 7548836764 / 9894395041</p>
+              <p>📍 Digital & Government Service Center</p>
+            </div>
 
             {/* Working Hours */}
-            <div className="mb-4">
-              <p className="font-medium">⏰ Working Hours</p>
+            <div className="mt-6">
+              <p className="font-medium text-slate-900 mb-1">
+                ⏰ Working Hours
+              </p>
               <p className="text-sm text-slate-600">
                 Monday – Saturday: 9:00 AM – 8:00 PM <br />
                 Sunday: Closed
@@ -36,12 +45,14 @@ export default function Contact() {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=RS%20Communication"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 text-center border py-3 rounded-full"
+                className="flex-1 text-center border border-slate-300
+                           py-3 rounded-full font-medium
+                           hover:border-slate-400 transition"
               >
                 📍 Get Directions
               </a>
@@ -51,39 +62,42 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 text-center bg-gradient-to-r from-blue-600 to-green-500
-                           text-white py-3 rounded-full"
+                           text-white py-3 rounded-full font-medium
+                           hover:opacity-90 transition"
               >
                 WhatsApp
               </a>
             </div>
           </div>
 
-          {/* Right */}
+          {/* Right: Map & Reviews */}
           <div className="space-y-6">
 
-            {/* Google Map */}
-            <div className="rounded-2xl overflow-hidden border">
+            {/* Map */}
+            <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white">
               <iframe
                 title="RS Communication Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973.669232281873!2d77.17954077001282!3d8.368327561921472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05ad00516c299b%3A0xa125ea919bc9b187!2sRS%20Communication!5e0!3m2!1sen!2sin!4v1766763489749!5m2!1sen!2sin"
-                className="w-full h-[250px] border-0"
+                className="w-full h-[260px] border-0"
                 loading="lazy"
-              ></iframe>
+              />
             </div>
 
-            {/* Google Reviews */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <h4 className="font-semibold mb-2">⭐ Google Reviews</h4>
-              <p className="text-sm text-slate-600">
-                Visit Google Maps to read our customer reviews.
+            {/* Reviews */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <h4 className="font-semibold text-slate-900 mb-2">
+                ⭐ Google Reviews
+              </h4>
+              <p className="text-sm text-slate-600 mb-3">
+                Read what our customers say about our services.
               </p>
               <a
-                href="https://www.google.com/search?q=RS+Communication"
+                href="https://share.google/RVNwL8quUdH0WgEIM"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 text-sm underline"
+                className="text-blue-600 text-sm font-medium hover:underline"
               >
-                View Reviews
+                View Reviews →
               </a>
             </div>
 

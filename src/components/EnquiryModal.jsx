@@ -27,12 +27,12 @@ export default function EnquiryModal({ product, onClose }) {
 
   const deliveryText = product.delivery
     ? "Delivery charges applicable"
-    : "Delivery not applicable (Pickup only)"
+    : "Pickup only"
 
   const message = encodeURIComponent(
     `Hello, I would like to enquire about:\n\n` +
     `Product: ${product.name}\n` +
-    `Product Code: ${product.code}\n` +
+    `Code: ${product.code}\n` +
     `${getSizeText()}\n` +
     `Quantity: ${quantity}\n` +
     `Price: ${product.price}\n` +
@@ -42,22 +42,24 @@ export default function EnquiryModal({ product, onClose }) {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+      <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl p-7">
 
-        <h3 className="text-xl font-semibold mb-2">
-          Enquire – {product.name}
-        </h3>
-
-        <p className="text-sm text-slate-600 mb-4">
-          {product.price}
-        </p>
-
-        {product.delivery && (
-          <p className="text-xs text-orange-600 mb-4">
-            Delivery charges applicable
+        {/* Header */}
+        <div className="mb-5">
+          <h3 className="text-xl font-semibold text-slate-900">
+            Enquire – {product.name}
+          </h3>
+          <p className="text-sm text-slate-600 mt-1">
+            {product.price}
           </p>
-        )}
+
+          {product.delivery && (
+            <p className="text-xs text-orange-600 mt-2">
+              Delivery charges applicable
+            </p>
+          )}
+        </div>
 
         {/* Size Inputs */}
         {(product.type === "frame" || product.type === "flex") && (
@@ -67,14 +69,14 @@ export default function EnquiryModal({ product, onClose }) {
               placeholder={`Width (${product.type === "frame" ? "inches" : "feet"})`}
               value={width}
               onChange={(e) => setWidth(e.target.value)}
-              className="border rounded-lg px-4 py-2"
+              className="border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
               type="number"
               placeholder={`Height (${product.type === "frame" ? "inches" : "feet"})`}
               value={height}
               onChange={(e) => setHeight(e.target.value)}
-              className="border rounded-lg px-4 py-2"
+              className="border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
         )}
@@ -87,7 +89,7 @@ export default function EnquiryModal({ product, onClose }) {
             <select
               value={pillowSize}
               onChange={(e) => setPillowSize(e.target.value)}
-              className="w-full border rounded-lg px-4 py-2"
+              className="w-full border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option>Small</option>
               <option>Medium</option>
@@ -106,25 +108,27 @@ export default function EnquiryModal({ product, onClose }) {
             min="1"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
-            className="w-full border rounded-lg px-4 py-2"
+            className="w-full border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         {/* Actions */}
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 text-center bg-gradient-to-r from-blue-600 to-green-500
-                       text-white py-3 rounded-full font-medium"
+                       text-white py-3 rounded-full font-medium
+                       hover:opacity-90 transition"
           >
             Send Enquiry
           </a>
 
           <button
             onClick={onClose}
-            className="flex-1 border border-slate-300 rounded-full py-3"
+            className="flex-1 border border-slate-300 rounded-full py-3
+                       text-slate-700 hover:border-slate-400 transition"
           >
             Cancel
           </button>
