@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import FloatingWhatsApp from "./components/FloatingWhatsApp"
+import FloatingInstagram from "./components/FloatingInstagram"
 
 import Home from "./pages/Home"
 import Services from "./pages/Services"
@@ -9,15 +12,23 @@ import Contact from "./pages/Contact"
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/rs-communication">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+
+      <main className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+
       <Footer />
+
+      {/* Floating Social Buttons (site-wide) */}
+      <FloatingInstagram />
+      <FloatingWhatsApp />
     </BrowserRouter>
   )
 }
