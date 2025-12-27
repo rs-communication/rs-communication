@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modern card hover */
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-slate-100
+         hover:shadow-xl hover:-translate-y-1
+         transition-all duration-300;
+}
+
+/* Gradient button */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-green-500
+         text-white px-6 py-3 rounded-full
+         font-medium hover:opacity-90 transition;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
