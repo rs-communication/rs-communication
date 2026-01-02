@@ -17,18 +17,14 @@ export default function Footer() {
         {/* Top Section */}
         <div className="grid gap-10 md:grid-cols-3">
 
-          {/* Brand */}
+          {/* Brand (PNG Logo Only) */}
           <div>
-            <div className="flex items-center gap-4 mb-4">
-              <img
-                src={`${base}images/logo.png`}
-                alt="RS Communication"
-                className="h-14 sm:h-16 w-auto"
-              />
-              <span className="text-xl font-semibold text-white">
-                RS Communication
-              </span>
-            </div>
+            <img
+              src={`${base}images/logo-rs-web.png`}
+              alt="RS Communication"
+              className="h-16 sm:h-20 w-auto mb-4"
+            />
+
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Digital & Government service center providing reliable online,
               printing, and photo solutions under one roof.

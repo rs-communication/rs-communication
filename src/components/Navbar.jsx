@@ -17,22 +17,23 @@ export default function Navbar() {
 
   const navItemClass = ({ isActive }) =>
     `relative px-1 py-2 text-sm transition-colors
-     ${isActive ? "text-blue-600 font-semibold" : "text-slate-700 hover:text-blue-600"}`
+     ${
+       isActive
+         ? "text-blue-600 font-semibold"
+         : "text-slate-700 hover:text-blue-600"
+     }`
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        {/* LOGO (PNG ONLY) */}
+        <Link to="/" className="flex items-center">
           <img
-            src={`${base}images/logo.png`}
+            src={`${base}images/logo-rs-web.png`}
             alt="RS Communication"
-            className="h-9 w-auto"
+            className="h-10 sm:h-11 w-auto"
           />
-          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-            RS Communication
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

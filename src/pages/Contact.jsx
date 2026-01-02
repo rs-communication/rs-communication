@@ -24,9 +24,12 @@ export default function Contact() {
           {/* Left: Contact Card */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
 
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">
-              RS Communication
-            </h3>
+            {/* BRAND LOGO */}
+            <img
+              src="images/logo-rs-web.png"
+              alt="RS Communication"
+              className="h-14 sm:h-16 w-auto mb-4"
+            />
 
             <div className="space-y-3 text-slate-700 text-sm">
               <p>📞 7548836764 / 9894395041</p>
