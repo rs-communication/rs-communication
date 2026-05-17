@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* LOGO */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo-rs-web.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/logo-rs-web.png`}
             alt="RS Communication"
             width={180}
             height={44}

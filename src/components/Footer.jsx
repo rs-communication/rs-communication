@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/images/logo-rs-web.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/logo-rs-web.png`}
               alt="RS Communication"
               width={160}
               height={40}

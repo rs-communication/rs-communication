@@ -1,3 +1,5 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 export const galleryItems = [
   {
     code: "PF-001",
@@ -11,7 +13,7 @@ export const galleryItems = [
       ta: "₹199 முதல்"
     },
     delivery: true,
-    image: "/images/frame.jpg",
+    image: `${basePath}/images/frame.jpg`,
   },
   {
     code: "FX-002",
@@ -25,7 +27,7 @@ export const galleryItems = [
       ta: "சதுர அடிக்கு ₹40 முதல்"
     },
     delivery: true,
-    image: "/images/flex.jpg",
+    image: `${basePath}/images/flex.jpg`,
   },
   {
     code: "PL-003",
@@ -39,7 +41,7 @@ export const galleryItems = [
       ta: "₹399 முதல்"
     },
     delivery: true,
-    image: "/images/pillow.jpg",
+    image: `${basePath}/images/pillow.jpg`,
   },
   {
     code: "MG-004",
@@ -53,6 +55,6 @@ export const galleryItems = [
       ta: "₹299 முதல்"
     },
     delivery: true,
-    image: "/images/mug.jpg",
+    image: `${basePath}/images/mug.jpg`,
   },
 ]
