@@ -1,34 +1,58 @@
 export const galleryItems = [
   {
     code: "PF-001",
-    name: "Photo Frame Printing",
+    name: {
+      en: "Photo Frame Printing",
+      ta: "போட்டோ பிரேம் பிரிண்டிங்"
+    },
     type: "frame",
-    price: "Starting from ₹199",
+    price: {
+      en: "Starting from ₹199",
+      ta: "₹199 முதல்"
+    },
     delivery: true,
-    image: `${import.meta.env.BASE_URL}images/frame.jpg`,
+    image: "/images/frame.jpg",
   },
   {
     code: "FX-002",
-    name: "Flex Printing",
+    name: {
+      en: "Flex Printing",
+      ta: "ஃபிளெக்ஸ் பிரிண்டிங்"
+    },
     type: "flex",
-    price: "Starting from ₹40 / sq.ft",
+    price: {
+      en: "Starting from ₹40 / sq.ft",
+      ta: "சதுர அடிக்கு ₹40 முதல்"
+    },
     delivery: true,
-    image: `${import.meta.env.BASE_URL}images/flex.jpg`,
+    image: "/images/flex.jpg",
   },
   {
     code: "PL-003",
-    name: "Pillow Printing",
+    name: {
+      en: "Pillow Printing",
+      ta: "தலையணை பிரிண்டிங்"
+    },
     type: "pillow",
-    price: "Starting from ₹399",
+    price: {
+      en: "Starting from ₹399",
+      ta: "₹399 முதல்"
+    },
     delivery: true,
-    image: `${import.meta.env.BASE_URL}images/pillow.jpg`,
+    image: "/images/pillow.jpg",
   },
   {
     code: "MG-004",
-    name: "Coffee Mug Printing",
+    name: {
+      en: "Coffee Mug Printing",
+      ta: "காபி மக் பிரிண்டிங்"
+    },
     type: "mug",
-    price: "Starting from ₹299",
-    delivery: true, // usually pickup
-    image: `${import.meta.env.BASE_URL}images/mug.jpg`,
+    price: {
+      en: "Starting from ₹299",
+      ta: "₹299 முதல்"
+    },
+    delivery: true,
+    image: "/images/mug.jpg",
   },
 ]

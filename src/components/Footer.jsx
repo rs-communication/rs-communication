@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom"
+'use client'
+
+import Link from "next/link"
+import Image from "next/image"
+import { useLanguage } from "../context/LanguageContext"
 
 export default function Footer() {
-  const base = import.meta.env.BASE_URL
+  const { t } = useLanguage()
 
   const quickLinks = [
-    { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
+    { name: t("nav.home"), path: "/" },
+    { name: t("nav.services"), path: "/services" },
+    { name: t("nav.gallery"), path: "/gallery" },
+    { name: t("nav.contact"), path: "/contact" },
   ]
 
   return (
@@ -17,30 +21,31 @@ export default function Footer() {
         {/* Top Section */}
         <div className="grid gap-10 md:grid-cols-3">
 
-          {/* Brand (PNG Logo Only) */}
+          {/* Brand */}
           <div>
-            <img
-              src={`${base}images/logo-rs-web.png`}
+            <Image
+              src="/images/logo-rs-web.png"
               alt="RS Communication"
-              className="h-16 sm:h-20 w-auto mb-4"
+              width={160}
+              height={40}
+              className="h-16 sm:h-20 w-auto mb-4 brightness-0 invert"
             />
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Digital & Government service center providing reliable online,
-              printing, and photo solutions under one roof.
+              {t("footer.tagline")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-semibold mb-4">
-              Quick Links
+              {t("footer.quickLinks")}
             </h4>
             <ul className="space-y-2 text-sm">
               {quickLinks.map(link => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="hover:text-white transition"
                   >
                     {link.name}
@@ -53,12 +58,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-4">
-              Contact
+              {t("footer.contact")}
             </h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>📞 7548836764 / 9894395041</li>
               <li>📍 RS Communication, Tamil Nadu</li>
-              <li>⏰ Mon – Sat: 9:00 AM – 8:00 PM</li>
+              <li>⏰ {t("footer.workingHours")}</li>
             </ul>
           </div>
 
@@ -71,7 +76,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
 
           <p>
-            © {new Date().getFullYear()} RS Communication. All rights reserved.
+            © {new Date().getFullYear()} RS Communication. {t("footer.rights")}
           </p>
 
           <div className="flex gap-5">
