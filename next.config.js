@@ -2,10 +2,10 @@
 const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
-  basePath: '/rs-communication',
+  basePath: '',
   trailingSlash: true,
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/rs-communication',
+    NEXT_PUBLIC_BASE_PATH: '',
   },
 }
 

@@ -2,7 +2,7 @@
   "version": 1,
   "config": {
     "env": {
-      "NEXT_PUBLIC_BASE_PATH": "/rs-communication"
+      "NEXT_PUBLIC_BASE_PATH": ""
     },
     "webpack": null,
     "eslint": {
@@ -15,7 +15,7 @@
     "typedRoutes": false,
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "/rs-communication",
+    "assetPrefix": "",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.js",
     "useFileSystemPublicRoutes": true,
@@ -49,7 +49,7 @@
         256,
         384
       ],
-      "path": "/rs-communication/_next/image/",
+      "path": "/_next/image/",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -73,9 +73,9 @@
       "pagesBufferLength": 5
     },
     "amp": {
-      "canonicalBase": "/rs-communication"
+      "canonicalBase": ""
     },
-    "basePath": "/rs-communication",
+    "basePath": "",
     "sassOptions": {},
     "trailingSlash": true,
     "i18n": null,

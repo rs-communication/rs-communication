@@ -2,16 +2,8 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "/rs-communication",
+  "basePath": "",
   "redirects": [
-    {
-      "source": "/rs-communication",
-      "destination": "/rs-communication/",
-      "basePath": false,
-      "internal": true,
-      "statusCode": 308,
-      "regex": "^/rs-communication$"
-    },
     {
       "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
       "destination": "/:file",

@@ -50,7 +50,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/gallery": {
+    "/services": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -63,8 +63,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/gallery",
-      "dataRoute": "/gallery.rsc",
+      "srcRoute": "/services",
+      "dataRoute": "/services.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -98,7 +98,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/services": {
+    "/gallery": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -111,8 +111,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/services",
-      "dataRoute": "/services.rsc",
+      "srcRoute": "/gallery",
+      "dataRoute": "/gallery.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,8 +126,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "da90c86bea79b657e779a47ab1cabc65",
-    "previewModeSigningKey": "67bf66dee200b1402c949e840d2a53955198804d8c04a33a4aab3500691ab3a5",
-    "previewModeEncryptionKey": "db6eae0b0f8fe9c7430a76a79f5c0e224dce99372a07eee8c798c1e992a536a6"
+    "previewModeId": "056ede457b6ece1d6677375c01a045aa",
+    "previewModeSigningKey": "f8dc6cedfcb122343085b0434d5c55ab9be335c0bdb8e8b9d8f2f34ef9517ae4",
+    "previewModeEncryptionKey": "8141e3715d40689cba374ffdf63de50d6af533ef82ce77eeda887786d24e2ce7"
   }
 }
